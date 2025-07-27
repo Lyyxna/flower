@@ -1,0 +1,96 @@
+/* 💖 Style général */
+body {
+    text-align: center;
+    font-family: 'Comic Sans MS', cursive;
+    background-image: url("https://i.pinimg.com/474x/f4/61/58/f46158c70c4535f713aefda30d79e3b9.jpg");
+    overflow: hidden;
+}
+
+/* 🌸 Conteneur principal */
+#gameContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+/* 🎀 Question principale */
+#question {
+    font-size: 24px;
+    font-weight: bold;
+    color: hotpink;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 5px white;
+}
+
+/* 🌟 Canvas du labyrinthe */
+#mazeCanvas {
+    display: block;
+    margin: auto;
+    border: 4px solid hotpink;
+    background-color: white;
+    position: relative;
+    z-index: 10; /* Pour qu'il reste visible */
+}
+
+/* 🎀 Boutons de direction */
+.button-container {
+    margin-top: 10px;
+}
+
+button {
+    background-color: hotpink;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    margin: 5px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
+}
+
+button:hover {
+    background-color: deeppink;
+}
+
+/* ✨ Effets d'amour */
+#loveEffects {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 5; /* Derrière le labyrinthe */
+}
+
+/* 💕 Mots d’amour */
+.love-word {
+    position: absolute;
+    font-size: 24px;
+    font-weight: bold;
+    color: hotpink;
+    font-family: 'Comic Sans MS', cursive;
+    text-shadow: 2px 2px 5px white;
+    animation: loveFloat 6s infinite alternate ease-in-out;
+    z-index: 100; /* Toujours devant */
+    max-width: 90%;
+    word-wrap: break-word;
+}
+
+/* ✨ Animation de flot des mots d’amour */
+@keyframes loveFloat {
+    0% { transform: translateY(0); opacity: 1; }
+    50% { transform: translateY(-30px); opacity: 0.7; }
+    100% { transform: translateY(0); opacity: 1; }
+}
+
+/* 📱 Ajustement mobile */
+@media screen and (max-width: 600px) {
+    .love-word {
+        font-size: 16px;
+    }
+}
